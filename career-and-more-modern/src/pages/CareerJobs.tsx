@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Download, MapPin, Calendar, Briefcase } from 'lucide-react';
+import { ArrowRight, Download, MapPin } from 'lucide-react';
 
 const CareerJobs = () => {
   const jobOpenings = [
