@@ -1,0 +1,70 @@
+.scheme_default .top_panel .top_panel_navi {
+    background: #058008 !important;
+    background: -moz-linear-gradient(left,#058008 0%,#0bbd10 100%) !important;
+    background: -webkit-linear-gradient(left,#058008 0%,#0bbd10 100%) !important;
+    background: linear-gradient(to right,#058008 0%,#0bbd10 100%) !important;
+}
+
+#gruen {
+    background: #058008 !important;
+    background: -moz-linear-gradient(left,#058008 0%,#08a30c 40%, #ffffff 50%) !important;
+    background: -webkit-linear-gradient(left,#058008 0%,#08a30c 40%, #ffffff 50%) !important;
+    background: linear-gradient(to right,#058008 0%,#08a30c 40%, #ffffff 50%) !important;
+}
+.scheme_default .trx_addons_scroll_to_top, .scheme_default .trx_addons_cv .trx_addons_scroll_to_top {
+    border-color: black!important;
+    background-color: black !important;
+}
+
+@media only screen and (max-width: 600px) {
+.vc-hoverbox-front {
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+}
+
+.scheme_default .sc_button_hover_slide_left {
+    background: linear-gradient(to right, #058008 0%,#058008 50%,#058808 0%,#058008 100%) no-repeat scroll right bottom / 210% 100% rgba(0,0,0,0)!important;
+}
+
+.oxi-image-hover-wrapper-1 .oxi-addons-row .oxi-image-square-hover-style-3 .oxi-image-hover-figure .oxi-image-hover-caption-tab,.mask1,.mask2 {
+    background:#058008!important;
+}
+
+.tablepress-id-1 .column-2, .tablepress-id-1 .column-3, .tablepress-id-1 .column-4 {
+  padding:0px 50px;
+}
+.tablepress-id-2 .column-2, .tablepress-id-2 .column-3 {
+  padding:0px 50px;
+}
+.tablepress-id-2 .column-4 {
+    padding:0px 75px;
+}
+.tablepress td {
+    padding: 30px 0px!important;
+}
+
+.tablepress td.column-1 {
+    padding: 30px 8px!important;
+}
+.tablepress td.column-2, .tablepress td.column-3, .tablepress td.column-4 {
+    text-align:center!important;
+}
+.tablepress tfoot th, .tablepress thead th {
+    background-color: #05800830;
+}
+.tablepress .sorting:hover, .tablepress .sorting_asc, .tablepress .sorting_desc {
+    background-color: #058008;
+    color: #fff;
+    transition: 0.3s;
+}
+vc_progress_bar wpb_content_element vc_custom_1598950157113  vc_progress-bar-color-bar_red vc_progress_bar_narrow{
+    display: none!important;
+}
+.scheme_default .trx_addons_hover_mask {
+    background: #058008!important;
+    background: -moz-linear-gradient(left,#058808 0%,#058008 100%)!important;
+    background: -webkit-linear-gradient(left,#058808 0%,#058008 100%)!important;
+    background: linear-gradient(to right,#058808 0%,#058008 100%)!important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#058808',endColorstr='#058008',GradientType=1 )!important;
+}

@@ -1,0 +1,7 @@
+@font-face {
+	font-family: "Carnas Light";
+	src: url("wp-content\themes\hr-advisor\css\font-face\Carnas\Carnas-Light.otf") format("opentype");
+	url("wp-content\themes\hr-advisor\css\font-face\Carnas\Carnas-Light.woff") format('woff');
+	font-weight: light;
+	font-style: normal;
+}
