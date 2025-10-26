@@ -39,11 +39,23 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <motion.div
-              className="w-12 h-12 bg-primary-500 rounded-lg flex items-center justify-center"
+              className="h-12 bg-primary-500 rounded-lg flex items-center justify-center px-4"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-white font-bold text-xl">C</span>
+              <img 
+                src="/logo.svg" 
+                alt="career & more Logo" 
+                className="h-8 w-auto"
+                onError={(e) => {
+                  // Fallback zu Text falls Logo nicht existiert
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const fallback = target.nextElementSibling;
+                  if (fallback) (fallback as HTMLElement).style.display = 'block';
+                }}
+              />
+              <span className="text-white font-bold text-xl hidden">c</span>
             </motion.div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">{companyInfo.name}</h1>
@@ -200,3 +212,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

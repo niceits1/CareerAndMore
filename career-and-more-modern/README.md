@@ -1,6 +1,6 @@
-# Career & More - Moderne React Website
+# career & more - Moderne React Website
 
-Eine vollständig neu entwickelte, moderne Website für Career & More - Personal- und Unternehmensberatung in Weißenburg.
+Eine vollständig neu entwickelte, moderne Website für career & more - Personal- und Unternehmensberatung in Weißenburg.
 
 ## 🚀 Features
 
@@ -161,7 +161,7 @@ Die Website ist vollständig responsive und optimiert für:
 
 ## 📞 Kontakt & Support
 
-**Career & More GmbH**
+**career & more GmbH**
 - Adresse: Lettenweg 7, 91781 Weißenburg
 - Telefon: 09141/877990
 - E-Mail: info@careerandmore.de
@@ -169,8 +169,10 @@ Die Website ist vollständig responsive und optimiert für:
 
 ## 📄 Lizenz
 
-Alle Inhalte und das Design sind Eigentum von Career & More GmbH. Die technische Implementierung steht unter der MIT-Lizenz.
+Alle Inhalte und das Design sind Eigentum von career & more GmbH. Die technische Implementierung steht unter der MIT-Lizenz.
 
 ---
 
-**Entwickelt mit ❤️ für Career & More**
+**Entwickelt mit ❤️ für career & more**
+
+

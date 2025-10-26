@@ -64,3 +64,5 @@ export interface JobOpening {
   benefits: string[];
   datePosted: string;
 }
+
+

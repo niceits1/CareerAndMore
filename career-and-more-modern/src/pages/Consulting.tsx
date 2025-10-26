@@ -141,7 +141,7 @@ const Consulting = () => {
             variants={itemVariants}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Warum <span className="gradient-text">Career & More</span>?
+              Warum <span className="gradient-text">career & more</span>?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Unsere Consulting-Expertise basiert auf langjähriger Erfahrung 
@@ -236,3 +236,5 @@ const Consulting = () => {
 };
 
 export default Consulting;
+
+

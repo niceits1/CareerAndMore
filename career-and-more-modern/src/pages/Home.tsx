@@ -5,9 +5,8 @@ import Hero from '@/components/Hero';
 import ServicesGrid from '@/components/ServicesGrid';
 import AboutSection from '@/components/AboutSection';
 import TeamPreview from '@/components/TeamPreview';
-import Testimonials from '@/components/Testimonials';
 import ContactSection from '@/components/ContactSection';
-import { services, teamMembers, testimonials } from '@/data/company';
+import { services, teamMembers } from '@/data/company';
 
 const Home = () => {
 
@@ -107,28 +106,6 @@ const Home = () => {
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
-        </div>
-      </motion.section>
-
-      {/* Testimonials */}
-      <motion.section
-        className="section-padding"
-        variants={itemVariants}
-      >
-        <div className="container-custom">
-          <motion.div
-            className="text-center mb-16"
-            variants={itemVariants}
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Was unsere <span className="gradient-text">Kunden sagen</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Erfolgreiche Projekte und zufriedene Kunden sind unser Antrieb.
-            </p>
-          </motion.div>
-
-          <Testimonials testimonials={testimonials} />
         </div>
       </motion.section>
 

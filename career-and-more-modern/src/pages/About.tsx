@@ -29,7 +29,7 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: '2016', title: 'Gründung', description: 'Career & More wird gegründet' },
+    { year: '2016', title: 'Gründung', description: 'career & more wird gegründet' },
     { year: '2018', title: 'Erste Erfolge', description: '100+ erfolgreiche Vermittlungen' },
     { year: '2020', title: 'Expansion', description: 'Erweiterung der Servicepalette' },
     { year: '2023', title: 'Wachstum', description: '500+ erfolgreiche Projekte' }
@@ -68,7 +68,7 @@ const About = () => {
               Wer wir sind
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Career & More ist Ihr kompetenter Partner für Direct Search, 
+              career & more ist Ihr kompetenter Partner für Direct Search, 
               Personal- und Unternehmensberatung. Seit unserer Gründung 2016 
               unterstützen wir mittelständische und große Industrieunternehmen 
               bei der erfolgreichen Personalentwicklung.

@@ -49,7 +49,7 @@ const AboutSection = () => {
             </p>
 
             <p className="text-lg text-gray-600 mb-8">
-              Ob Sie eine Stelle suchen oder bieten – Career & More bietet das 
+              Ob Sie eine Stelle suchen oder bieten – career & more bietet das 
               Branchen-Netzwerk für Ihren Erfolg. Wir verbinden Talente mit 
               Unternehmen und schaffen langfristige Partnerschaften.
             </p>
@@ -128,3 +128,5 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+
+

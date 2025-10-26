@@ -1,7 +1,7 @@
 import { CompanyInfo, ContactInfo, NavigationItem, Service, TeamMember, Testimonial } from '@/types';
 
 export const companyInfo: CompanyInfo = {
-  name: 'Career & More',
+  name: 'career & more',
   description: 'Ihr Partner für Direct Search, Personal- und Unternehmensberatung',
   founded: '2016',
   legal: {
@@ -190,14 +190,14 @@ export const teamMembers: TeamMember[] = [
 export const testimonials: Testimonial[] = [
   {
     id: 'testimonial-1',
-    text: 'Career & More hat uns bei der Suche nach einem neuen Geschäftsführer hervorragend unterstützt. Die Professionalität und das Verständnis für unsere Branche waren beeindruckend.',
+    text: 'career & more hat uns bei der Suche nach einem neuen Geschäftsführer hervorragend unterstützt. Die Professionalität und das Verständnis für unsere Branche waren beeindruckend.',
     author: 'Max Mustermann',
     position: 'Geschäftsführer',
     company: 'Muster Industrie GmbH'
   },
   {
     id: 'testimonial-2',
-    text: 'Durch das Employer Branding von Career & More konnten wir unsere Attraktivität als Arbeitgeber deutlich steigern und haben seitdem deutlich mehr qualifizierte Bewerbungen erhalten.',
+    text: 'Durch das Employer Branding von career & more konnten wir unsere Attraktivität als Arbeitgeber deutlich steigern und haben seitdem deutlich mehr qualifizierte Bewerbungen erhalten.',
     author: 'Anna Schmidt',
     position: 'Personalmanagerin',
     company: 'Tech Solutions AG'
@@ -210,3 +210,5 @@ export const testimonials: Testimonial[] = [
     company: 'Industrie Holding'
   }
 ];
+
+

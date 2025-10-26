@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { TeamMember } from '@/types';
 
 interface TeamPreviewProps {
@@ -39,8 +38,20 @@ const TeamPreview = ({ members }: TeamPreviewProps) => {
         >
           <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
             {/* Image */}
-            <div className="aspect-square bg-gradient-to-br from-primary-500 to-primary-700 relative overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
+            <div className="aspect-square relative overflow-hidden">
+              <img 
+                src={`/images/team/${member.id}.jpg`}
+                alt={member.name}
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  // Fallback zu Gradient falls Bild nicht existiert
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const fallback = target.nextElementSibling as HTMLElement;
+                  if (fallback) fallback.style.display = 'flex';
+                }}
+              />
+              <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center absolute inset-0" style={{display: 'none'}}>
                 <div className="text-center text-white">
                   <div className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl font-bold">
@@ -89,34 +100,10 @@ const TeamPreview = ({ members }: TeamPreviewProps) => {
         </motion.div>
       ))}
 
-      {/* CTA Card */}
-      <motion.div
-        className="group"
-        variants={itemVariants}
-      >
-        <Link
-          to="/team"
-          className="block h-full bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
-        >
-          <div className="h-full flex flex-col items-center justify-center p-6 text-center text-white">
-            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-4">
-              <ArrowRight className="w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">
-              Unser gesamtes Team
-            </h3>
-            <p className="text-sm opacity-90 mb-4">
-              Lernen Sie alle unsere Experten kennen und erfahren Sie mehr über ihre Expertise.
-            </p>
-            <div className="flex items-center space-x-2 group-hover:translate-x-1 transition-transform duration-200">
-              <span className="text-sm font-medium">Team entdecken</span>
-              <ArrowRight className="w-4 h-4" />
-            </div>
-          </div>
-        </Link>
-      </motion.div>
     </motion.div>
   );
 };
 
 export default TeamPreview;
+
+

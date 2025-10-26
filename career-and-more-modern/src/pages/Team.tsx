@@ -59,8 +59,20 @@ const Team = () => {
                 whileHover={{ y: -5 }}
               >
                 {/* Image */}
-                <div className="aspect-square bg-gradient-to-br from-primary-500 to-primary-700 relative overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
+                <div className="aspect-square relative overflow-hidden">
+                  <img 
+                    src={`/images/team/${member.id}.jpg`}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback zu Gradient falls Bild nicht existiert
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const fallback = target.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center absolute inset-0" style={{display: 'none'}}>
                     <div className="text-center text-white">
                       <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span className="text-2xl font-bold">
@@ -142,3 +154,5 @@ const Team = () => {
 };
 
 export default Team;
+
+

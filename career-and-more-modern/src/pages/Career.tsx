@@ -54,7 +54,7 @@ const Career = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              <span className="gradient-text">Karriere</span> bei Career & More
+              <span className="gradient-text">Karriere</span> bei career & more
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Entdecken Sie spannende Karrieremöglichkeiten und entwickeln Sie 

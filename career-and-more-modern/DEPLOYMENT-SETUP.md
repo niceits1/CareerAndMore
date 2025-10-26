@@ -99,7 +99,7 @@ npm run preview
 
 ## 🎯 Nach erfolgreichem Deployment:
 
-Ihre Career & More Website ist dann live mit:
+Ihre career & more Website ist dann live mit:
 - ✅ Vollständigen Karriere-Seiten
 - ✅ Bewerbungsformular
 - ✅ Stellenangebote-Tabelle
