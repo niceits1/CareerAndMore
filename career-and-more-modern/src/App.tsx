@@ -3,10 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
+import CookieBanner from '@/components/CookieBanner';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
 import Services from '@/pages/Services';
 import ServiceDetail from '@/pages/ServiceDetail';
+import ServicesCategory from '@/pages/ServicesCategory';
 import Consulting from '@/pages/Consulting';
 import ConsultingDetail from '@/pages/ConsultingDetail';
 import Career from '@/pages/Career';
@@ -36,6 +38,9 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services/recruiting" element={<ServicesCategory />} />
+              <Route path="/services/entwicklung" element={<ServicesCategory />} />
+              <Route path="/services/organisation" element={<ServicesCategory />} />
               <Route path="/services/:id" element={<ServiceDetail />} />
               <Route path="/consulting" element={<Consulting />} />
               <Route path="/consulting/:id" element={<ConsultingDetail />} />
@@ -51,6 +56,7 @@ function App() {
           </motion.main>
         </AnimatePresence>
         <Footer />
+        <CookieBanner />
       </div>
     </Router>
   );

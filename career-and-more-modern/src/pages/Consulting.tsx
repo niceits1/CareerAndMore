@@ -98,7 +98,8 @@ const Consulting = () => {
                 key={service.id}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 p-6 h-full flex flex-col"
                 variants={itemVariants}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ duration: 0.3 }}
               >
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                   {service.title}
@@ -178,17 +179,97 @@ const Consulting = () => {
                 key={item.title}
                 className="text-center"
                 variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
               >
-                <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <motion.div 
+                  className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mx-auto mb-4"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.5 }}
+                >
                   <span className="text-primary-600 font-bold text-xl">
                     {index + 1}
                   </span>
-                </div>
+                </motion.div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-600">
                   {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Process Section */}
+      <motion.section
+        className="section-padding"
+        variants={itemVariants}
+      >
+        <div className="container-custom">
+          <motion.div
+            className="text-center mb-16"
+            variants={itemVariants}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Unser <span className="gradient-text">Beratungsprozess</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Strukturiert, transparent und erfolgsorientiert - so arbeiten wir 
+              mit Ihnen zusammen.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {[
+              {
+                step: '01',
+                title: 'Kennenlernen',
+                description: 'Wir lernen Ihr Unternehmen und Ihre Ziele kennen, um die beste Beratung zu gewährleisten.'
+              },
+              {
+                step: '02',
+                title: 'Strategie',
+                description: 'Entwicklung einer maßgeschneiderten Strategie, die zu Ihrem Unternehmen passt.'
+              },
+              {
+                step: '03',
+                title: 'Umsetzung',
+                description: 'Begleitete Implementierung mit professioneller Unterstützung in jedem Schritt.'
+              },
+              {
+                step: '04',
+                title: 'Optimierung',
+                description: 'Kontinuierliche Überwachung und Optimierung für nachhaltigen Erfolg.'
+              }
+            ].map((step) => (
+              <motion.div
+                key={step.step}
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+                variants={itemVariants}
+                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div 
+                  className="w-12 h-12 bg-primary-500 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {step.step}
+                </motion.div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 text-center">
+                  {step.title}
+                </h3>
+                <p className="text-gray-600 text-sm text-center">
+                  {step.description}
                 </p>
               </motion.div>
             ))}

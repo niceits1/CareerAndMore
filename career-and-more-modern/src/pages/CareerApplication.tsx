@@ -92,7 +92,7 @@ const CareerApplication = () => {
                 <span className="gradient-text">Bewerbung gesendet!</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                Vielen Dank für Ihre Bewerbung! Wir haben Ihre Unterlagen erhalten 
+                Vielen Dank für Ihre Bewerbung auf die vermittelte Stelle! Wir haben Ihre Unterlagen erhalten 
                 und werden uns schnellstmöglich bei Ihnen melden.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -133,11 +133,11 @@ const CareerApplication = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              <span className="gradient-text">Bewerbung</span> bei career & more
+              <span className="gradient-text">Bewerbung</span> für eine vermittelte Stelle
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Werden Sie Teil unseres Expertenteams! Füllen Sie das nachfolgende 
-              Formular aus und wir melden uns schnellstmöglich bei Ihnen zurück.
+              Bewerben Sie sich auf eine Position, die wir für unsere Partnerunternehmen vermitteln. 
+              Füllen Sie das nachfolgende Formular aus und wir melden uns schnellstmöglich bei Ihnen zurück.
             </p>
           </div>
         </div>
@@ -167,11 +167,12 @@ const CareerApplication = () => {
                     value={formData.position}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white"
+                    style={{ color: '#111827' }}
                   >
-                    <option value="">--- Stelle auswählen ---</option>
+                    <option value="" style={{ color: '#111827' }}>--- Stelle auswählen ---</option>
                     {positions.map((position, index) => (
-                      <option key={index} value={position}>
+                      <option key={index} value={position} style={{ color: '#111827' }}>
                         {position}
                       </option>
                     ))}

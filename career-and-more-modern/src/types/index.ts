@@ -15,6 +15,7 @@ export interface Service {
   icon: string;
   features: string[];
   image?: string;
+  category?: 'recruiting' | 'entwicklung' | 'organisation';
 }
 
 export interface ContactInfo {
@@ -23,6 +24,8 @@ export interface ContactInfo {
   email: string;
   website: string;
   businessHours: string;
+  linkedin?: string;
+  xing?: string;
 }
 
 export interface CompanyInfo {
@@ -63,6 +66,15 @@ export interface JobOpening {
   requirements: string[];
   benefits: string[];
   datePosted: string;
+}
+
+export interface Partnership {
+  id: string;
+  name: string;
+  description: string;
+  logo: string;
+  website: string;
+  descriptionText: string;
 }
 
 

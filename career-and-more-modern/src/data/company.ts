@@ -20,7 +20,9 @@ export const contactInfo: ContactInfo = {
   phone: '09141/877990',
   email: 'info@careerandmore.de',
   website: 'https://careerandmore.de',
-  businessHours: 'Mo-Fr: 8:00-18:00 Uhr'
+  businessHours: 'Mo-Fr: 8:00-18:00 Uhr',
+  linkedin: 'https://www.linkedin.com/company/career-more-gmbh/posts/?feedView=all',
+  xing: 'https://www.xing.com/pages/career-more-gmbh'
 };
 
 export const navigationItems: NavigationItem[] = [
@@ -36,13 +38,9 @@ export const navigationItems: NavigationItem[] = [
     label: 'Services',
     href: '/services',
     children: [
-      { label: 'Direct Search', href: '/services/direct-search' },
-      { label: 'Employer Branding', href: '/services/employer-branding' },
-      { label: 'Personal-Entwicklung', href: '/services/personal-entwicklung' },
-      { label: 'Management Audit', href: '/services/management-audit' },
-      { label: 'Mediation', href: '/services/mediation' },
-      { label: 'Outplacement', href: '/services/outplacement' },
-      { label: 'Organisations-Entwicklung', href: '/services/organisations-entwicklung' }
+      { label: 'Recruiting & Talent Management', href: '/services/recruiting' },
+      { label: 'Personalentwicklung', href: '/services/entwicklung' },
+      { label: 'Organisationsberatung', href: '/services/organisation' }
     ]
   },
   {
@@ -79,6 +77,7 @@ export const services: Service[] = [
     title: 'Direct Search',
     description: 'Erfolgreiches Recruiting von High Potentials - individuell abgestimmt auf Ihre spezifischen Bedürfnisse',
     icon: 'Search',
+    category: 'recruiting',
     features: [
       'Unabhängiges Recruiting von Führungskräften',
       'Individuelle Anpassung an Ihre Unternehmenskultur',
@@ -91,6 +90,7 @@ export const services: Service[] = [
     title: 'Employer Branding',
     description: 'Entwicklung und Stärkung Ihrer Arbeitgebermarke für erfolgreiche Talentgewinnung',
     icon: 'Users',
+    category: 'recruiting',
     features: [
       'Strategische Positionierung als attraktiver Arbeitgeber',
       'Entwicklung von Employer Value Propositions',
@@ -99,10 +99,24 @@ export const services: Service[] = [
     ]
   },
   {
+    id: 'outplacement',
+    title: 'Outplacement',
+    description: 'Karriereberatung und Unterstützung bei Stellenwechsel und Neuorientierung',
+    icon: 'ArrowRight',
+    category: 'recruiting',
+    features: [
+      'Individuelle Karriereberatung',
+      'Bewerbungscoaching und -training',
+      'Netzwerkaufbau und Kontaktvermittlung',
+      'Psychologische Unterstützung'
+    ]
+  },
+  {
     id: 'personal-entwicklung',
     title: 'Personal-Entwicklung',
     description: 'Maßgeschneiderte Programme zur Entwicklung Ihrer Mitarbeiter und Führungskräfte',
     icon: 'TrendingUp',
+    category: 'entwicklung',
     features: [
       'Individuelle Entwicklungspläne',
       'Führungskräfte-Coaching',
@@ -115,6 +129,7 @@ export const services: Service[] = [
     title: 'Management Audit',
     description: 'Umfassende Bewertung und Optimierung Ihrer Führungsstrukturen',
     icon: 'BarChart3',
+    category: 'entwicklung',
     features: [
       'Analyse der aktuellen Führungsstrukturen',
       'Potenzialbewertung von Führungskräften',
@@ -126,7 +141,8 @@ export const services: Service[] = [
     id: 'mediation',
     title: 'Mediation',
     description: 'Professionelle Konfliktlösung für nachhaltige Arbeitsbeziehungen',
-    icon: 'Handshake',
+    icon: 'Users',
+    category: 'entwicklung',
     features: [
       'Neutrale Konfliktvermittlung',
       'Wiederherstellung der Arbeitsbeziehungen',
@@ -135,28 +151,41 @@ export const services: Service[] = [
     ]
   },
   {
-    id: 'outplacement',
-    title: 'Outplacement',
-    description: 'Karriereberatung und Unterstützung bei Stellenwechsel und Neuorientierung',
-    icon: 'ArrowRight',
-    features: [
-      'Individuelle Karriereberatung',
-      'Bewerbungscoaching und -training',
-      'Netzwerkaufbau und Kontaktvermittlung',
-      'Psychologische Unterstützung'
-    ]
-  },
-  {
     id: 'organisations-entwicklung',
     title: 'Organisations-Entwicklung',
     description: 'Strategische Weiterentwicklung Ihrer Unternehmensstruktur und -kultur',
     icon: 'Building2',
+    category: 'organisation',
     features: [
       'Analyse der aktuellen Organisationsstruktur',
       'Entwicklung neuer Arbeitsmodelle',
       'Change Management',
       'Kulturtransformation'
     ]
+  }
+];
+
+export const serviceCategories = [
+  {
+    id: 'recruiting',
+    title: 'Recruiting & Talent Management',
+    description: 'Von der Suche nach Top-Talenten bis zur erfolgreichen Talentgewinnung und -betreuung',
+    icon: 'Users',
+    services: services.filter(s => s.category === 'recruiting')
+  },
+  {
+    id: 'entwicklung',
+    title: 'Personalentwicklung',
+    description: 'Maßgeschneiderte Programme zur Entwicklung Ihrer Mitarbeiter, Führungskräfte und Teams',
+    icon: 'TrendingUp',
+    services: services.filter(s => s.category === 'entwicklung')
+  },
+  {
+    id: 'organisation',
+    title: 'Organisationsberatung',
+    description: 'Strategische Weiterentwicklung Ihrer Unternehmensstruktur und Organisationskultur',
+    icon: 'Building2',
+    services: services.filter(s => s.category === 'organisation')
   }
 ];
 
@@ -208,6 +237,17 @@ export const testimonials: Testimonial[] = [
     author: 'Thomas Weber',
     position: 'Ehemaliger Abteilungsleiter',
     company: 'Industrie Holding'
+  }
+];
+
+export const partnerships = [
+  {
+    id: 'jeta-tier-und-mensch',
+    name: 'JETA Tier und Mensch',
+    description: 'JETA Ketschauer Hof und mehr',
+    logo: '/images/partners/jeta-logo.png',
+    website: 'https://jeta-tier-und-mensch.de',
+    descriptionText: 'Wir unterstützen JETA Tier und Mensch bei ihrer Mission, die Verbindung zwischen Mensch, Tier und Natur zu stärken.'
   }
 ];
 

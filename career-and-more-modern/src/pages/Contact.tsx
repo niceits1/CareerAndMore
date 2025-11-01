@@ -242,20 +242,21 @@ const Contact = () => {
                     required
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 text-gray-900 bg-white"
+                    style={{ color: '#111827' }}
                   >
-                    <option value="">Bitte wählen...</option>
-                    <option value="direct-search">Direct Search</option>
-                    <option value="employer-branding">Employer Branding</option>
-                    <option value="personal-entwicklung">Personal-Entwicklung</option>
-                    <option value="management-audit">Management Audit</option>
-                    <option value="mediation">Mediation</option>
-                    <option value="outplacement">Outplacement</option>
-                    <option value="organisations-entwicklung">Organisations-Entwicklung</option>
-                    <option value="management-beratung">Management-Beratung</option>
-                    <option value="strategisches-personalmanagement">Strategisches Personal-Management</option>
-                    <option value="unternehmens-nachfolge">Unternehmens-Nachfolge</option>
-                    <option value="sonstiges">Sonstiges</option>
+                    <option value="" style={{ color: '#111827' }}>Bitte wählen...</option>
+                    <option value="direct-search" style={{ color: '#111827' }}>Direct Search</option>
+                    <option value="employer-branding" style={{ color: '#111827' }}>Employer Branding</option>
+                    <option value="personal-entwicklung" style={{ color: '#111827' }}>Personal-Entwicklung</option>
+                    <option value="management-audit" style={{ color: '#111827' }}>Management Audit</option>
+                    <option value="mediation" style={{ color: '#111827' }}>Mediation</option>
+                    <option value="outplacement" style={{ color: '#111827' }}>Outplacement</option>
+                    <option value="organisations-entwicklung" style={{ color: '#111827' }}>Organisations-Entwicklung</option>
+                    <option value="management-beratung" style={{ color: '#111827' }}>Management-Beratung</option>
+                    <option value="strategisches-personalmanagement" style={{ color: '#111827' }}>Strategisches Personal-Management</option>
+                    <option value="unternehmens-nachfolge" style={{ color: '#111827' }}>Unternehmens-Nachfolge</option>
+                    <option value="sonstiges" style={{ color: '#111827' }}>Sonstiges</option>
                   </select>
                 </div>
 
